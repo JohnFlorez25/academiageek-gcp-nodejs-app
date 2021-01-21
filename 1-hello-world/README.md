@@ -17,11 +17,11 @@ Esta carpeta contiene un ejemplo de código de una pequeña aplicación desplega
 
 5. Clonar el repositorio: 
    
-   `git clone https://github.com/JohnFlorez25/academiageek-gcp-nodejs-app.git `
+   `git clone https://github.com/JohnFlorez25/academiageek-gcp-nodejs-app.git`
 
 6. Cambiar de directorio 
    
-   `cd 1-hello-world`
+   `cd academiageek-gcp-nodejs-app/1-hello-world`
 
 7. Instalar las depedencias: 
    
@@ -41,7 +41,8 @@ Esta carpeta contiene un ejemplo de código de una pequeña aplicación desplega
     
     `gcloud app deploy`
 
+12. Obtener la url donde está desplegada la aplicación:
+    
+   `gcloud app browse`
 
-Mirar la aplicación desplegada en: 
-
-` https://YOUR_PROJECT_ID.appspot.com. `
+> NOTA: se recomienda eliminar el proyecto para asegurarse de eliminar completamente la App Engine de prueba
