@@ -30,29 +30,33 @@
 
     `chmod +x cloud_sql_proxy`
 
-9. Ejecute lo siguiente para iniciar el proxy de Cloud SQL y reemplace [YOUR_INSTANCE_CONNECTION_NAME] con el valor de connectionName:
+9. Crear el directorio donde el proxy socjet va a estar alojado:
 
-    `./cloud_sql_proxy -dir=/cloudsql \
-                  -instances="[YOUR_INSTANCE_CONNECTION_NAME]"`
+    `sudo mkdir /cloudsql`
+    `sudo chmod 0777 /cloudsql`
 
-10. Crear un nuevo bucket haciendo uso del servicio de STORAGE y colocar el nombre del bucket en el archivo de configuración 
+10. Ejecute lo siguiente para iniciar el proxy de Cloud SQL y reemplace [YOUR_INSTANCE_CONNECTION_NAME] con el valor de connectionName:
+
+    `./cloud_sql_proxy -instances=<INSTANCE_CONNECTION_NAME>=tcp:3306`
+
+11. Crear un nuevo bucket haciendo uso del servicio de STORAGE y colocar el nombre del bucket en el archivo de configuración 
 
 > NOTA: recuerde hacer el bucket público para poder acceder a las imágenes
 
-11.  Ejecutar la aplicación 
+12.  Ejecutar la aplicación 
 
     `npm start`
 
-12.  Mirar la app en la siguiente ruta 
+13.  Mirar la app en la siguiente ruta 
     
     `http://localhost:8080`
 
-13. Parar la aplicación presionando Ctrl+C.
+14. Parar la aplicación presionando Ctrl+C.
 
-14. Deplegar la app: 
+15. Deplegar la app: 
     
     `gcloud app deploy`
 
-15. Obtener la url donde está desplegada la aplicación:
+16. Obtener la url donde está desplegada la aplicación:
     
    `gcloud app browse`

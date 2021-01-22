@@ -32,8 +32,7 @@
 
 9. Ejecute lo siguiente para iniciar el proxy de Cloud SQL y reemplace [YOUR_INSTANCE_CONNECTION_NAME] con el valor de connectionName:
 
-    `./cloud_sql_proxy -dir=/cloudsql \
-                  -instances="[YOUR_INSTANCE_CONNECTION_NAME]"`
+    `./cloud_sql_proxy -instances=<INSTANCE_CONNECTION_NAME>=tcp:3306`
 
 10.  Ejecutar la aplicación 
 
