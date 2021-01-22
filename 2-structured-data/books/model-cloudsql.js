@@ -20,7 +20,7 @@ const config = require('../config');
 const options = {
   user: config.get('MYSQL_USER'),
   password: config.get('MYSQL_PASSWORD'),
-  database: 'bookshelf',
+  database: config.get('DB_NAME'),
 };
 
 if (
@@ -139,7 +139,7 @@ function createSchema(config) {
       DEFAULT CHARACTER SET = 'utf8'
       DEFAULT COLLATE 'utf8_general_ci';
     USE \`bookshelf\`;
-    CREATE TABLE IF NOT EXISTS \`bookshelf\`.\`books\` (
+    CREATE TABLE IF NOT EXISTS \`books\` (
       \`id\` INT UNSIGNED NOT NULL AUTO_INCREMENT,
       \`title\` VARCHAR(255) NULL,
       \`author\` VARCHAR(255) NULL,
